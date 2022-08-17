@@ -13,8 +13,7 @@ def setup_foo():
     """
     def _get_icon_path():
         return os.path.join(
-            os.path.dirname(os.path.abspath(__file__)), 'icons', 'foo.svg'
-    )
+            os.path.dirname(os.path.abspath(__file__)), 'icons', 'foo.svg')
 
     # Make sure executable is in $PATH
     def _get_foo_command(port):
@@ -27,12 +26,12 @@ def setup_foo():
         if not os.path.exists(working_dir):
             os.makedirs(working_dir)
             logger.info("Created directory %s" % working_dir)
-        else:    
+        else:
             logger.info("Directory %s already exists" % working_dir)
         return ['foo']
     
     return {
-        'command': '_get_foo_command',
+        'command': ['flask', 'run', '-p {port}'],
         'timeout': 20,
         'new_browser_tab': True,
         'launcher_entry': {

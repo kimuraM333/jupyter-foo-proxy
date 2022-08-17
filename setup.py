@@ -17,10 +17,11 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     packages=setuptools.find_packages(),
-	keywords=['jupyter', 'testjsp', 'jupyterhub'],
-	classifiers=['Framework :: Jupyter'],
+    keywords=['jupyter', 'testjsp', 'jupyterhub'],
+    classifiers=['Framework :: Jupyter'],
     install_requires=[
-        'jupyter-server-proxy>=1.5.0'
+        'jupyter-server-proxy>=1.5.0',
+        'Flask'
     ],
     entry_points={
         'jupyter_serverproxy_servers': [
