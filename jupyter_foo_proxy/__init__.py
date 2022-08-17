@@ -31,7 +31,7 @@ def setup_foo():
         return ['foo']
     
     return {
-        'command': ['flask', 'run', '-p {port}'],
+        'command': ['flask', 'run', '-h 0.0.0.0', '-p {port}'],
         'timeout': 60,
         'new_browser_tab': True,
         'launcher_entry': {
