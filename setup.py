@@ -20,7 +20,7 @@ setuptools.setup(
     keywords=['jupyter', 'testjsp', 'jupyterhub'],
     classifiers=['Framework :: Jupyter'],
     install_requires=[
-        'jupyter-server-proxy>=1.5.0',
+        'jupyter-server-proxy>=3.2.0',
         'Flask'
     ],
     entry_points={

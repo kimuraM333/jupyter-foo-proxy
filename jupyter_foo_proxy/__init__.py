@@ -32,6 +32,7 @@ def setup_foo():
     
     return {
         'command': ['flask', 'run', '-p {port}'],
+        'timeout': 60,
         'new_browser_tab': True,
         'launcher_entry': {
             'title': 'testjsp',
