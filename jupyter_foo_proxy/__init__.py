@@ -31,7 +31,8 @@ def setup_foo():
         return ['foo']
     
     return {
-        'command': ['flask', 'run', '-h 0.0.0.0', '-p {port}'],
+        # 'command': ['flask','', 'run', '-h 0.0.0.0', '-p {port}'],
+        'command': ['python','./build/lib/jupyter_foo_proxy/app.py', '{port}'],
         'timeout': 60,
         'new_browser_tab': True,
         'launcher_entry': {
@@ -39,3 +40,4 @@ def setup_foo():
             'icon_path': _get_icon_path()
         },
     }
+ 
