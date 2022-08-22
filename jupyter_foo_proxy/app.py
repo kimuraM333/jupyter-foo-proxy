@@ -1,6 +1,6 @@
 from flask import Flask
 import sys
-
+import requests
 
 port = int(sys.argv[1])
 app = Flask(__name__)
@@ -13,7 +13,8 @@ def hello_world():
 
 @app.route('/test')
 def hello_world_test():
-    return 'Hello, World! test'
+    response = requests.get('https://www.google.com')
+    return response.content
 
 
 if __name__ == "__main__":
